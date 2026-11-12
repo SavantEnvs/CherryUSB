@@ -1,0 +1,9 @@
+project: savantenvs/CherryUSB
+target: fuzz_desc_check
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_desc_check/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_desc_check
+    libfuzzer: true
+    timeout: 5

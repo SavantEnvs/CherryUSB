@@ -1,0 +1,9 @@
+project: savantenvs/CherryUSB
+target: fuzz_usbh_enumerate
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_usbh_enumerate/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_usbh_enumerate
+    libfuzzer: true
+    timeout: 5
